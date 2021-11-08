@@ -8,7 +8,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 def scrape_all():
     # Initiate headless driver for deployment
     executable_path = {'executable_path': ChromeDriverManager().install()}
-    browser = Browser('chrome', **executable_path, headless=False)
+    browser = Browser('chrome', **executable_path, headless=True)
 
     news_title, news_paragraph = mars_news(browser)
 
@@ -105,7 +105,6 @@ def mars_facts():
 def mars_hemispheres(browser):
     # Use browser to visit the URL 
     url = 'https://marshemispheres.com/'
-    browser.visit(url)
 
     # Create a list to hold the images and titles.
     hemisphere_image_urls = []
@@ -113,7 +112,7 @@ def mars_hemispheres(browser):
     # Write code to retrieve the image urls and titles for each hemisphere.
     try:
         for img in range (0,4):
-            html = browser.html
+            browser.visit(url)
             hemisphere_img = browser.find_by_tag('h3')[img]
             hemisphere_img.click()
             html = browser.html
