@@ -1,1 +1,2 @@
-# Mission-to-Mars
+# Mission to Mars
+For this challenge, I got introduced to web scraping and explored Flask applications a bit more. I learned about MongoDB and how to integrate it with a Flask app. Then I learned about Bootstrap and CSS for webpage design and customization. Although this was only a glimpse of what I can use HTML for, this was a fun project that allowed me to learn more about HTML and creating an web application to display my scraped data.
